@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #252522;
+}
+
+html {
+  background: #e8e6e4;
+  display: grid;
+  height: 100%;
+  overflow: hidden;
+  place-items: center;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-coral: #f36f59;
+  --color-ink: #252522;
+  --color-muted: #77766f;
+  --color-peach: #f6c9bf;
+  --color-sky: #a9d9fb;
+  --color-butter: #f3e58b;
+  --color-sage: #c9e8a1;
+  --color-rose: #f2a6b1;
+}
+
+@layer components {
+  .breed-card {
+    @apply overflow-hidden rounded-2xl bg-white shadow-[0_8px_28px_rgba(48,39,29,0.08)];
+  }
+}
+
+body {
+  background: var(--background);
+  border: 5px solid #252522;
+  border-radius: 40px;
+  box-shadow: 0 14px 40px rgba(37, 37, 34, 0.2);
+  box-sizing: border-box;
+  color: var(--foreground);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-geist-sans), sans-serif;
+  height: min(812px, 100dvh);
+  margin: 0;
+  max-width: 375px;
+  min-height: 0;
+  overflow: hidden;
+  width: calc(100% - 16px);
+}
